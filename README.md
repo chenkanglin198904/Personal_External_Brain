@@ -20,6 +20,8 @@ It doesn't think for you. It hands back the exact reasoning and evidence you had
 ## Why It Says "I Don't Know" — On Purpose
 
 Most AI note-taking tools optimize for always having an answer. This one does the opposite: **refusal rate is one of the quality metrics.** When the graph doesn't have reliable enough grounding, it says so instead of generating a plausible-sounding guess. That's what makes every answer it does give something you can actually trust.
+</br>
+![Personal External Brain Knowledge Graph](./personal-external-brain-knowledge-graph-banner.png)
 
 ## Features
 
