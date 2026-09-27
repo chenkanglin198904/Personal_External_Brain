@@ -1,22 +1,42 @@
-# LyNote
+# Personal External Brain Knowledge Graph
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-**Person keeps the upper layer. The graph keeps the details.** A local-first personal exobrain: put checkable knowledge on a graph so working memory only has to hold principles, tradeoffs, and your own mistakes.
+## What is this?
 
-People struggle with AI less because the model is weak, and more because knowledge is scattered, evidence does not line up, the same error repeats, and judgment does not compound. LyNote is not another chat window and not a world simulator. It joins the person and the exobrain: answers first return the layer worth internalizing; details stay on the graph for you to open and check. Learning and deciding share one graph.
+Ever read something useful, took a note, or got a great answer from an AI conversation — and a few weeks later couldn't find it again, or worse, couldn't remember *why* you believed it?
 
-First time in the workbench: [GUIDE.md](./GUIDE.md) (also under **用法** in the app; currently Chinese). Change code only after [PROJECT.md](./PROJECT.md). License: [LICENSE](./LICENSE) (MIT).
+This project isn't trying to help you remember more. It's trying to make sure that when you need to recall something, you get back the exact right piece — with its original source, context, and reasoning intact.
 
-GitHub does not switch README by browser language. This file is the default landing page; the Chinese text is the same document.
+## Design Philosophy: Your Brain Handles Judgment, the System Handles Detail
 
----
+The design follows a simple division of labor:
 
-## What it is for
+- **Your brain owns**: principles, trade-offs, and the mistakes you've already learned from — things that require real understanding
+- **The system owns**: concrete examples, step-by-step procedures,original sources, and raw data — things that should never rely on memory
 
-Human working memory is small. Stuffing examples, steps, sources, numbers, and old material into long-term recall crowds out higher models. If the exobrain is only a bookmark pile or fluent prose, you still cannot find the right layer, use it in the right place, or transfer it.
+It doesn't think for you. It hands back the exact reasoning and evidence you had at the time, when you actually need it.
 
-LyNote aims to:
+## Why It Says "I Don't Know" — On Purpose
+
+Most AI note-taking tools optimize for always having an answer. This one does the opposite: **refusal rate is one of the quality metrics.** When the graph doesn't have reliable enough grounding, it says so instead of generating a plausible-sounding guess. That's what makes every answer it does give something you can actually trust.
+
+## Features
+
+- Multi-format ingestion: notes, web pages, Markdown, PDFs, audio/video automatically extracted and linked into the graph
+- Topic-isolated recall: retrieval scoped by topic, so unrelated domains never contaminate each other
+- Single-question scoring: every retrieved fact is scored for confidence
+- Decision tracking: log a decision and its real-world outcome, closing the feedback loop over time
+
+## Tech Stack
+
+- Graph database: Kuzu
+- Vector store: LanceDB
+- Backend: Python 3.11/3.12
+- Frontend: React (Node 18+)
+- Local-first — your data never leaves your machine
+
+Personal External Brain Knowledge Graph aims to:
 
 1. **Offload** — details are retrievable and checkable; you only keep what should be internalized.
 2. **Fit** — return the layer that matches the current topic and situation, not a ten-paragraph summary.
@@ -129,3 +149,27 @@ npm run dev
 - API: http://localhost:8000/docs (the frontend proxies `/v1/*`)
 
 Graph default is Kuzu (`data/lynote.kuzu`), workbench state is `data/workspace.json`, vectors default to LanceDB (`data/vectors`).
+
+## Related Projects
+
+This project is part of a small set of tools we're exploring around trustworthy, human-in-the-loop AI workflows:
+
+- **[Lynote Humanize Text](https://github.com/lynote-ai/humanize-text)** —an AI text humanization tool that rewrites AI-generated text to read naturally, with a 5-stage pipeline and independently evaluated quality metrics (9.1/10 overall, 100% key-information retention across 50
+  expert-reviewed samples).
+- **AI Detector** — *(link to be added)* a companion tool for detecting AI-generated text, addressing the same "trustworthy AI content" problem from the opposite direction.
+
+If this project helps you organize what you learn, Lynote AI Humanize and AI Detector address the other side of the same concern: making sure AI-produced or AI-assisted content stays honest and readable.
+
+## License
+
+This project is released under the [MIT License](./LICENSE). You're free to use, modify, and distribute it, including for commercial purposes, provided the original copyright notice is retained.
+
+## Support & Contact
+
+This is a very early-stage project — the architecture and interactions are still changing quickly. If you run into issues, have ideas, or just want to push back on a design decision, these are the best ways to reach us:
+
+- **Contribution guide**: see [PROJECT.md](./PROJECT.md) before opening a PR
+- **Direct contact**: *(add your preferred email or contact method here)*
+
+We'd rather hear "this doesn't work for me" early than get a polite star
+and silence — honest feedback at this stage is worth more than praise.
