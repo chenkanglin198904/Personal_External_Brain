@@ -1,9 +1,9 @@
-from lynote.contracts.models import ChatRequest, Claim, Evidence, Relation, Source, SourceSpan
-from lynote.modules.tutor.transfer import find_transfers
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import ChatRequest, Claim, Evidence, Relation, Source, SourceSpan
+from personal_external_brain.modules.tutor.transfer import find_transfers
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

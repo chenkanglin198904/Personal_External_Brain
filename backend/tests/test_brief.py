@@ -1,6 +1,6 @@
-from lynote.contracts.models import ComposeBriefRequest
-from lynote.modules.brief.service import BriefService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import ComposeBriefRequest
+from personal_external_brain.modules.brief.service import BriefService
+from personal_external_brain.workspace import Workspace
 
 
 def test_compose_brief_only_cites_subgraph_claims() -> None:

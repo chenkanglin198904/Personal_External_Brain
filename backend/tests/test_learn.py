@@ -1,4 +1,4 @@
-from lynote.contracts.models import (
+from personal_external_brain.contracts.models import (
     ChatRequest,
     Claim,
     Concept,
@@ -9,11 +9,11 @@ from lynote.contracts.models import (
     SourceSpan,
     StartReviewRequest,
 )
-from lynote.modules.graph.ids import new_id
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.modules.graph.ids import new_id
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

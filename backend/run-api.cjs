@@ -24,6 +24,6 @@ if (!fs.existsSync(python)) {
   process.exit(1);
 }
 
-const child = spawn(python, ["-m", "lynote"], { cwd: root, stdio: "inherit" });
+const child = spawn(python, ["-m", "personal_external_brain"], { cwd: root, stdio: "inherit" });
 
 child.on("exit", (code) => process.exit(code ?? 0));

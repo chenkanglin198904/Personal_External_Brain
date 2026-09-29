@@ -1,9 +1,9 @@
-from lynote.contracts.models import ChatRequest, GradeProbeRequest, ChatMessage, GroundedAnswer, GroundedRef
-from lynote.modules.tutor.probe import attach_probe
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import ChatRequest, GradeProbeRequest, ChatMessage, GroundedAnswer, GroundedRef
+from personal_external_brain.modules.tutor.probe import attach_probe
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

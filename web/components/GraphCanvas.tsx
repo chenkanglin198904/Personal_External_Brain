@@ -84,7 +84,7 @@ function LyNode({ data }: NodeProps<CanvasNode>) {
   );
 }
 
-const nodeTypes = { lynote: LyNode };
+const nodeTypes = { personal_external_brain: LyNode };
 
 export function GraphCanvas({
   graph,
@@ -186,7 +186,7 @@ function GraphCanvasInner({
       const matched = searching && hitIds.includes(item.id);
       return {
         id: item.id,
-        type: "lynote",
+        type: "personal_external_brain",
         position: { x: item.x, y: item.y },
         selected: selectedId === item.id,
         data: {

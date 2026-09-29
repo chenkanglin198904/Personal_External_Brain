@@ -1,8 +1,8 @@
-from lynote.contracts.models import IngestSourceRequest
-from lynote.modules.ingest.fetch import FetchedPage, assert_http_url
-from lynote.modules.ingest.htmltext import html_to_text
-from lynote.modules.ingest.service import IngestService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import IngestSourceRequest
+from personal_external_brain.modules.ingest.fetch import FetchedPage, assert_http_url
+from personal_external_brain.modules.ingest.htmltext import html_to_text
+from personal_external_brain.modules.ingest.service import IngestService
+from personal_external_brain.workspace import Workspace
 
 
 def test_html_to_text_strips_script_and_keeps_title() -> None:
@@ -128,7 +128,7 @@ def test_scanned_pdf_uses_vision_transcript() -> None:
 
     from pypdf import PdfWriter
 
-    from lynote.modules.ingest.pdftext import extract_pdf_text
+    from personal_external_brain.modules.ingest.pdftext import extract_pdf_text
 
     writer = PdfWriter()
     writer.add_blank_page(width=72, height=72)

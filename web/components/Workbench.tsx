@@ -134,7 +134,7 @@ export function Workbench() {
     <div className="flex h-screen flex-col">
       <header className="flex items-center justify-between border-b border-line px-5 py-3">
         <div className="flex items-baseline gap-3">
-          <h1 className="font-serif text-2xl tracking-tight">LyNote</h1>
+          <h1 className="font-serif text-2xl tracking-tight">Personal External Brain</h1>
           <p className="text-sm text-muted">个人外脑知识平台</p>
           <Link href="/guide" className="text-sm text-gold hover:underline">
             用法

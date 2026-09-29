@@ -29,7 +29,7 @@ loadRootEnv();
 function apiInternalUrl() {
   return (
     process.env.API_INTERNAL_URL ||
-    `http://127.0.0.1:${process.env.API_PORT || process.env.LYNOTE_API_PORT || "8000"}`
+    `http://127.0.0.1:${process.env.API_PORT || process.env.PEB_API_PORT || "8000"}`
   );
 }
 

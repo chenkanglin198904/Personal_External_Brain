@@ -1,5 +1,5 @@
 [project]
-name = "lynote"
+name = "personal-external-brain"
 version = "0.1.0"
 description = "Person keeps the upper layer. The graph keeps the details."
 license = { text = "MIT" }
@@ -26,4 +26,4 @@ requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["lynote*"]
+include = ["personal_external_brain*"]

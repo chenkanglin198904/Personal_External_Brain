@@ -1,10 +1,10 @@
-from lynote.contracts.models import Profile, ScratchNoteRequest
-from lynote.modules.learn.industry import apply_industry_hints
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.providers.websearch import SearchHit, search_web
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import Profile, ScratchNoteRequest
+from personal_external_brain.modules.learn.industry import apply_industry_hints
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.providers.websearch import SearchHit, search_web
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

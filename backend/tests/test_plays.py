@@ -2,13 +2,13 @@ from datetime import datetime, timedelta, timezone
 
 from pydantic import ValidationError
 
-from lynote.contracts.models import CommitBriefRequest, RunPlayRequest
-from lynote.modules.learn.plays import catalog, get_play
-from lynote.modules.retrieve.context import play_boost
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import CommitBriefRequest, RunPlayRequest
+from personal_external_brain.modules.learn.plays import catalog, get_play
+from personal_external_brain.modules.retrieve.context import play_boost
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

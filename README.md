@@ -150,17 +150,8 @@ npm run dev
 - Guide: http://localhost:3000/guide
 - API: http://localhost:8000/docs (the frontend proxies `/v1/*`)
 
-Graph default is Kuzu (`data/lynote.kuzu`), workbench state is `data/workspace.json`, vectors default to LanceDB (`data/vectors`).
+Graph default is Kuzu (`data/graph.kuzu`), workbench state is `data/workspace.json`, vectors default to LanceDB (`data/vectors`).
 
-## Related Projects
-
-This project is part of a small set of tools we're exploring around trustworthy, human-in-the-loop AI workflows:
-
-- **[Lynote Humanize Text](https://github.com/lynote-ai/humanize-text)** —an AI text humanization tool that rewrites AI-generated text to read naturally, with a 5-stage pipeline and independently evaluated quality metrics (9.1/10 overall, 100% key-information retention across 50
-  expert-reviewed samples).
-- **AI Detector** — *(link to be added)* a companion tool for detecting AI-generated text, addressing the same "trustworthy AI content" problem from the opposite direction.
-
-If this project helps you organize what you learn, Lynote AI Humanize and AI Detector address the other side of the same concern: making sure AI-produced or AI-assisted content stays honest and readable.
 
 ## License
 

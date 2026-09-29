@@ -294,7 +294,7 @@ export function RightPanel({
             {learnMessages.map((message) => (
               <article key={message.id} className="border border-line bg-raised p-3">
                 <p className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                  {message.role === "user" ? "你" : "LyNote"}
+                  {message.role === "user" ? "你" : "Personal External Brain"}
                 </p>
                 {message.role === "assistant" && message.grounded ? (
                   <GroundedBody

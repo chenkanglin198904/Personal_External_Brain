@@ -1,4 +1,4 @@
-# LyNote 使用说明
+# Personal External Brain 使用说明
 
 [English README](README.md) · [简体中文 README](README.zh-CN.md)
 
@@ -10,7 +10,7 @@
 
 ## 这是什么
 
-LyNote 是个人外脑知识平台。它帮你做四件事：
+Personal External Brain 是个人外脑知识平台。它帮你做四件事：
 
 1. **入库**：从随手记、网页、Markdown、PDF、音频、视频里筛出对当前主题有用的材料。
 2. **召回**：在需要时，按主题找出带出处的主张，而不是搜一篇流畅的空话。

@@ -1,6 +1,6 @@
-from lynote.contracts.models import Evidence, SourceSpan
-from lynote.modules.graph.inspect import excerpt_from_evidence, inspect_node
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import Evidence, SourceSpan
+from personal_external_brain.modules.graph.inspect import excerpt_from_evidence, inspect_node
+from personal_external_brain.workspace import Workspace
 
 
 def test_claim_excerpt_aligns_to_source() -> None:

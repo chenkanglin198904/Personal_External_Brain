@@ -1,8 +1,8 @@
-from lynote.contracts.models import ChatRequest, CreateGoalRequest
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import ChatRequest, CreateGoalRequest
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:
@@ -92,7 +92,7 @@ def test_chat_lookup_does_not_invent_principle() -> None:
 
 
 def test_chat_practiced_claim_promotes_to_keep() -> None:
-    from lynote.contracts.models import PracticeStat
+    from personal_external_brain.contracts.models import PracticeStat
 
     workspace = _workspace()
     workspace.practice["goal_graph_vs_notes:claim_evidence"] = PracticeStat(

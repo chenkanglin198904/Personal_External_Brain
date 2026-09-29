@@ -1,11 +1,11 @@
-from lynote.contracts.models import (
+from personal_external_brain.contracts.models import (
     CommitBriefRequest,
     ComposeBriefRequest,
     CreateGoalRequest,
     IngestSourceRequest,
     ReviewBriefRequest,
 )
-from lynote.workspace import Workspace
+from personal_external_brain.workspace import Workspace
 
 
 def test_seed_graph_has_evidence_and_conflict() -> None:

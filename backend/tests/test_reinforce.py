@@ -1,10 +1,10 @@
 import pytest
 
-from lynote.contracts.models import CaptureLessonRequest, ChatRequest, CommitBriefRequest, PracticeStat
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import CaptureLessonRequest, ChatRequest, CommitBriefRequest, PracticeStat
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:
@@ -18,7 +18,7 @@ def _workspace() -> Workspace:
 
 
 def test_touch_schedules_review_and_boosts_retrieve() -> None:
-    from lynote.modules.retrieve.service import _use_boost
+    from personal_external_brain.modules.retrieve.service import _use_boost
 
     workspace = _workspace()
     query = "个人决策要不要模拟社会"

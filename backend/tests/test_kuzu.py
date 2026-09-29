@@ -2,16 +2,16 @@ from pathlib import Path
 
 import pytest
 
-from lynote.contracts.models import Claim, Decision, DecisionOption, Evidence, Source, SourceSpan
-from lynote.modules.graph.persist import load_workspace_state, save_workspace_state
-from lynote.modules.graph.store import InMemoryGraphStore
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import Claim, Decision, DecisionOption, Evidence, Source, SourceSpan
+from personal_external_brain.modules.graph.persist import load_workspace_state, save_workspace_state
+from personal_external_brain.modules.graph.store import InMemoryGraphStore
+from personal_external_brain.workspace import Workspace
 
 kuzu = pytest.importorskip("kuzu")
 
 
 def test_kuzu_roundtrip_claim(tmp_path: Path) -> None:
-    from lynote.modules.graph.kuzu_store import KuzuGraphStore
+    from personal_external_brain.modules.graph.kuzu_store import KuzuGraphStore
 
     path = tmp_path / "graph.kuzu"
     store = KuzuGraphStore(path)
@@ -55,7 +55,7 @@ def test_kuzu_roundtrip_claim(tmp_path: Path) -> None:
 
 
 def test_workspace_restores_without_reseeding(tmp_path: Path) -> None:
-    from lynote.modules.graph.kuzu_store import KuzuGraphStore
+    from personal_external_brain.modules.graph.kuzu_store import KuzuGraphStore
 
     graph_path = tmp_path / "ws.kuzu"
     state_path = tmp_path / "workspace.json"
@@ -107,7 +107,7 @@ def test_workspace_json_roundtrip(tmp_path: Path) -> None:
 
 
 def test_kuzu_roundtrip_decision_outcome(tmp_path: Path) -> None:
-    from lynote.modules.graph.kuzu_store import KuzuGraphStore
+    from personal_external_brain.modules.graph.kuzu_store import KuzuGraphStore
 
     path = tmp_path / "decision.kuzu"
     store = KuzuGraphStore(path)

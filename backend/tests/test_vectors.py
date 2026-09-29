@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore, LanceDbVectorStore, build_vector_store
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore, LanceDbVectorStore, build_vector_store
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def test_lancedb_roundtrip(tmp_path: Path) -> None:
@@ -28,7 +28,7 @@ def test_workspace_sync_persists_vectors(tmp_path: Path) -> None:
         )
     )
     workspace.retrieve.sync(workspace.graph)
-    from lynote.modules.retrieve.service import _claim_blob
+    from personal_external_brain.modules.retrieve.service import _claim_blob
 
     query = embedder.embed([_claim_blob(workspace.graph.claims["claim_rot"])])[0]
     restored = LanceDbVectorStore(tmp_path / "ws-vectors")

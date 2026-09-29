@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "用法 · LyNote",
-  description: "第一次使用 LyNote：目标、界面、入库、学习、决策与空状态含义",
+  title: "用法 · Personal External Brain",
+  description: "第一次使用 Personal External Brain：目标、界面、入库、学习、决策与空状态含义",
 };
 
 const SECTIONS: { id: string; title: string; body: ReactNode }[] = [
@@ -13,7 +13,7 @@ const SECTIONS: { id: string; title: string; body: ReactNode }[] = [
     title: "这是什么",
     body: (
       <>
-        <p>LyNote 是个人外脑知识平台，用来筛资料、建带证据的图谱，并在需要时召回、学习和做判断。</p>
+        <p>Personal External Brain 是个人外脑知识平台，用来筛资料、建带证据的图谱，并在需要时召回、学习和做判断。</p>
         <ol className="mt-3 list-decimal space-y-2 pl-5">
           <li>
             <strong className="text-gold">入库</strong>：从随手记、网页、Markdown、PDF、音频、视频里筛出对当前主题有用的材料。
@@ -191,7 +191,7 @@ export default function GuidePage() {
       <header className="flex items-center justify-between border-b border-line px-5 py-3">
         <div className="flex items-baseline gap-3">
           <Link href="/" className="font-serif text-2xl tracking-tight hover:text-gold">
-            LyNote
+            Personal External Brain
           </Link>
           <p className="text-sm text-muted">用法</p>
         </div>

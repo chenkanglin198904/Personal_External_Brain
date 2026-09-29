@@ -1,11 +1,11 @@
 import pytest
 
-from lynote.contracts.models import ChatRequest
-from lynote.modules.learn.pack import pack_claims
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import ChatRequest
+from personal_external_brain.modules.learn.pack import pack_claims
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:
@@ -76,7 +76,7 @@ def test_clear_override_restores_auto() -> None:
 
 
 def test_cannot_keep_candidate() -> None:
-    from lynote.contracts.models import Claim, Evidence, SourceSpan
+    from personal_external_brain.contracts.models import Claim, Evidence, SourceSpan
 
     workspace = _workspace()
     workspace.graph.upsert_claim(

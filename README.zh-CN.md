@@ -6,7 +6,7 @@
 
 **人脑管上层，外脑管细节。** 一个本地优先的个人外脑：把可核对的知识放进图谱，让有限的工作记忆只保留原理、取舍和自己的误区。
 
-普通人用不好 AI，通常不是模型不够强，而是知识散、证据对不上、错了下次还摔、判断无法复利。LyNote 不做第二个聊天窗口，也不做世界模拟。它要让**人脑和外脑合成一体**：问到时先给该放进脑子的一层，细节留在图上点开核对；学和判走同一张图。
+普通人用不好 AI，通常不是模型不够强，而是知识散、证据对不上、错了下次还摔、判断无法复利。Personal External Brain 不做第二个聊天窗口，也不做世界模拟。它要让**人脑和外脑合成一体**：问到时先给该放进脑子的一层，细节留在图上点开核对；学和判走同一张图。
 
 GitHub 不会按浏览器语言切换 README。英文是默认首页，中文是同一份说明。
 
@@ -133,20 +133,12 @@ npm run dev
 - 用法：http://localhost:3000/guide
 - API：http://localhost:8000/docs（前端把 `/v1/*` 转到后端）
 
-图谱默认 Kuzu（`data/lynote.kuzu`），工作台状态在 `data/workspace.json`，向量默认 LanceDB（`data/vectors`）。
+图谱默认 Kuzu（`data/graph.kuzu`），工作台状态在 `data/workspace.json`，向量默认 LanceDB（`data/vectors`）。
 
 ## 项目状态
 
 这是一个非常早期的项目，架构和交互都在快速迭代中。欢迎 star、提issue，或者直接读代码给建议——比起"看起来完成度很高"，我们更在意"每一个功能是不是真的解决了问题"。
 
-## 相关项目
-
-这个项目是我们围绕"可信赖、人机协同的 AI 工作流"探索的一小组工具之一：
-
-- **[Lynote AI Humanize](https://github.com/lynote-ai/humanize-text)** ——一款 AI 文本人性化工具，通过五阶段处理流程把 AI 生成的文本改写得更自然，并有独立评测的质量指标佐证（综合评分 9.1/10，在 50 组专家评审样本中关键信息保留率达 100%）。
-- **AI Detector** ——（链接待补充）一款用于检测 AI 生成文本的配套工具，从相反的方向解决同一个"AI 内容可信度"问题。
-
-如果这个项目帮你更好地组织你学到的东西，那么 Lynote AI Humanize 和AI Detector 关注的是同一个问题的另一面：确保 AI 生成或 AI 辅助产出的内容依然诚实、可读。
 
 ## 开源协议
 
@@ -158,9 +150,9 @@ npm run dev
 我们：
 
 - **Bug 反馈与功能建议**：请提交
-  [GitHub Issue](https://github.com/chenkanglin198904/lynote/issues)
+  [GitHub Issue](https://github.com/chenkanglin198904/Personal_External_Brain/issues)
 - **问题与讨论**：
-  [GitHub Discussions](https://github.com/chenkanglin198904/lynote/discussions)
+  [GitHub Discussions](https://github.com/chenkanglin198904/Personal_External_Brain/discussions)
   （如尚未开启，请到仓库设置中手动启用）
 - **贡献指南**：提交 PR 前请先阅读 [PROJECT.md](./PROJECT.md)
 - **直接联系方式**：（此处填写你希望公开的邮箱或其他联系渠道）

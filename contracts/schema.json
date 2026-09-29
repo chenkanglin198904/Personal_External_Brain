@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lynote.dev/contracts/schema.json",
-  "title": "LyNote contracts",
+  "$id": "https://github.com/chenkanglin198904/Personal_External_Brain/contracts/schema.json",
+  "title": "Personal External Brain contracts",
   "description": "Minimal personal knowledge graph. Claims are first-class and must carry evidence.",
   "$defs": {
     "NodeKind": {

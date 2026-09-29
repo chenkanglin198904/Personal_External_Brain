@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, timezone
 
-from lynote.contracts.models import (
+from personal_external_brain.contracts.models import (
     ChatRequest,
     CommitBriefRequest,
     ComposeBriefRequest,
@@ -9,13 +9,13 @@ from lynote.contracts.models import (
     Profile,
     ScratchNoteRequest,
 )
-from lynote.modules.learn.today import compose_today
-from lynote.modules.ingest.avtext import transcribe_audio, transcribe_video
-from lynote.modules.graph.maintain import deprecate_claim, merge_concepts
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.modules.learn.today import compose_today
+from personal_external_brain.modules.ingest.avtext import transcribe_audio, transcribe_video
+from personal_external_brain.modules.graph.maintain import deprecate_claim, merge_concepts
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

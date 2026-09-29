@@ -1,22 +1,22 @@
-name: lynote
+name: personal-external-brain
 
 services:
   api:
     build:
       context: .
       dockerfile: docker/api.Dockerfile
-    image: lynote-api:latest
-    container_name: lynote-api
+    image: personal-external-brain-api:latest
+    container_name: personal-external-brain-api
     restart: unless-stopped
     env_file:
       - .env
     environment:
-      LYNOTE_ENV: prod
+      PEB_ENV: prod
       API_HOST: 0.0.0.0
       API_PORT: "8000"
       API_RELOAD: "0"
       DATA_DIR: /data
-      GRAPH_PATH: /data/lynote.kuzu
+      GRAPH_PATH: /data/graph.kuzu
       WORKSPACE_STATE_PATH: /data/workspace.json
       VECTOR_PATH: /data/vectors
       VECTOR_BACKEND: lancedb
@@ -46,8 +46,8 @@ services:
       dockerfile: docker/web.Dockerfile
       args:
         API_INTERNAL_URL: http://api:8000
-    image: lynote-web:latest
-    container_name: lynote-web
+    image: personal-external-brain-web:latest
+    container_name: personal-external-brain-web
     restart: unless-stopped
     environment:
       HOSTNAME: 0.0.0.0

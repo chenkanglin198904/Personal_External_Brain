@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: LyNote API
+  title: Personal External Brain API
   version: 0.1.0
   description: Personal knowledge graph workbench. Skeleton freeze — do not rename fields.
 servers:

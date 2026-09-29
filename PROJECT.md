@@ -1,4 +1,4 @@
-# LyNote
+# Personal External Brain
 
 [English README](README.md) · [简体中文 README](README.zh-CN.md)
 
@@ -6,7 +6,7 @@
 
 ## 一句话命题
 
-普通人用好 AI 的瓶颈，不是模型不够强，而是知识带宽不够、判断证据不够、跨域连接不够。LyNote 把「学」和「判」做成可复利的闭环。
+普通人用好 AI 的瓶颈，不是模型不够强，而是知识带宽不够、判断证据不够、跨域连接不够。Personal External Brain 把「学」和「判」做成可复利的闭环。
 
 ## 用户
 
@@ -66,7 +66,7 @@
 
 - 前端：Next.js + React Flow + Tailwind
 - 后端：FastAPI
-- 图存储：`GRAPH_BACKEND=kuzu` 落盘到 `data/lynote.kuzu`；收件箱 / 对话 / 当前简报写在 `data/workspace.json`。空库才灌种子。测试强制 `memory`，不碰真实数据目录。
+- 图存储：`GRAPH_BACKEND=kuzu` 落盘到 `data/graph.kuzu`；收件箱 / 对话 / 当前简报写在 `data/workspace.json`。空库才灌种子。测试强制 `memory`，不碰真实数据目录。
 - 向量：`providers.VectorStore` 协议。默认 `VECTOR_BACKEND=lancedb` 落盘到 `data/vectors`；测试强制 `memory`。无 embedding Key 时用 hashing 占位。扫描件 PDF 在有 Key 时视觉抽字，不得发明未见文字。
 - LLM / Embedding：默认官方 OpenAI（`LLM_API_KEY` + `https://api.openai.com/v1`）。协议兼容任意 `/v1` 网关，改 `LLM_BASE_URL` 即可；Key 留空则规则/本地回退。主张 quote 必须能在原文定位成 `source_span`，否则丢弃。
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "LyNote",
+  title: "Personal External Brain",
   description: "个人外脑知识平台：筛资料、建图谱、带着证据学习与判断",
 };
 

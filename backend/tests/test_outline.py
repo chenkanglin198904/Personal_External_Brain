@@ -1,11 +1,11 @@
 import pytest
 
-from lynote.contracts.models import CaptureLessonRequest, ChatMessage, ChatRequest, Claim, Evidence, SourceSpan
-from lynote.modules.learn.outline import capture_to_chapter, compose_outline
-from lynote.providers.embeddings import HashingEmbedder
-from lynote.providers.vectors import InMemoryVectorStore
-from lynote.modules.retrieve.service import RetrieveService
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import CaptureLessonRequest, ChatMessage, ChatRequest, Claim, Evidence, SourceSpan
+from personal_external_brain.modules.learn.outline import capture_to_chapter, compose_outline
+from personal_external_brain.providers.embeddings import HashingEmbedder
+from personal_external_brain.providers.vectors import InMemoryVectorStore
+from personal_external_brain.modules.retrieve.service import RetrieveService
+from personal_external_brain.workspace import Workspace
 
 
 def _workspace() -> Workspace:

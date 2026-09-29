@@ -1,10 +1,10 @@
-from lynote.contracts.models import Claim, Evidence, ConfirmHangRequest, IngestSourceRequest
-from lynote.llm.parse import parse_json_object
-from lynote.modules.extract.service import ExtractService
-from lynote.modules.extract.spans import locate_span
-from lynote.modules.gate.service import GateService
-from lynote.modules.graph.store import InMemoryGraphStore
-from lynote.workspace import Workspace
+from personal_external_brain.contracts.models import Claim, Evidence, ConfirmHangRequest, IngestSourceRequest
+from personal_external_brain.llm.parse import parse_json_object
+from personal_external_brain.modules.extract.service import ExtractService
+from personal_external_brain.modules.extract.spans import locate_span
+from personal_external_brain.modules.gate.service import GateService
+from personal_external_brain.modules.graph.store import InMemoryGraphStore
+from personal_external_brain.workspace import Workspace
 
 
 def test_parse_json_object_strips_fence() -> None:
